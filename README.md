@@ -4,7 +4,7 @@ One unique benefit of SPI is the fact that data can be transferred without inter
 
 Devices communicating via SPI are in a master-slave relationship. The master is the controlling device (usually a microcontroller), while the slave (usually a sensor, display, or memory chip) takes instruction from the master. The simplest configuration of SPI is a single master, single slave system, but one master can control more than one slave (more on this below).
 
-[![]![image](https://user-images.githubusercontent.com/56084662/193824125-bf139d6e-ccc1-420a-a3e5-05cd528a1e31.png)
+![image](https://user-images.githubusercontent.com/56084662/193824125-bf139d6e-ccc1-420a-a3e5-05cd528a1e31.png)
 
 
 **MOSI (Master Output/Slave Input)** – Line for the master to send data to the slave.
@@ -31,11 +31,12 @@ The master can choose which slave it wants to talk to by setting the slave's CS/
 
 SPI can be set up to operate with a single master and a single slave, and it can be set up with multiple slaves controlled by a single master. There are two ways to connect multiple slaves to the master. If the master has multiple slave select pins, the slaves can be wired in parallel like this:
 
-[![](RackMultipart20221004-1-uc1opb_html_6e423439cf696bae.png)](https://www.circuitbasics.com/wp-content/uploads/2016/01/Introduction-to-SPI-Multiple-Slave-Configuration-Separate-Slave-Select.png)
+![image](https://user-images.githubusercontent.com/56084662/193824360-ecbd0861-7ecf-4cc1-a5c9-744606e89c8c.png)
 
 If only one slave select pin is available, the slaves can be daisy-chained like this:
 
-[![](RackMultipart20221004-1-uc1opb_html_503f913ee3139c8a.png)](https://www.circuitbasics.com/wp-content/uploads/2016/01/Introduction-to-SPI-Multiple-Slave-Configuration-Daisy-Chained.png)
+![image](https://user-images.githubusercontent.com/56084662/193824398-a6f9f6f9-a2c9-43d9-872c-ae0d6a000520.png)
+
 
 # MOSI AND MISO
 
@@ -47,19 +48,19 @@ The slave can also send data back to the master through the MISO line in serial.
 
 1. The master outputs the clock signal:
 
-[![](RackMultipart20221004-1-uc1opb_html_69068176af344b72.png)](https://www.circuitbasics.com/wp-content/uploads/2016/01/Introduction-to-SPI-Data-Transmission-Diagram-Clock-Signal.png)
+![image](https://user-images.githubusercontent.com/56084662/193824461-415097ad-f693-49ef-bf2d-9ce3158890f5.png)
 
 2. The master switches the SS/CS pin to a low voltage state, which activates the slave:
 
-[![](RackMultipart20221004-1-uc1opb_html_82ef07cf3f806f30.png)](https://www.circuitbasics.com/wp-content/uploads/2016/01/Introduction-to-SPI-Data-Transmission-Diagram-Slave-Select-Activation.png)
+![image](https://user-images.githubusercontent.com/56084662/193824496-c2868a75-6b38-42d7-8348-694766ae2278.png)
 
 3. The master sends the data one bit at a time to the slave along the MOSI line. The slave reads the bits as they are received:
 
-[![](RackMultipart20221004-1-uc1opb_html_1785c0625b91a5ae.png)](https://www.circuitbasics.com/wp-content/uploads/2016/01/Introduction-to-SPI-Data-Transmission-Diagram-Master-to-Slave-Data-Transfer.png)
+![image](https://user-images.githubusercontent.com/56084662/193824570-a66ef623-62b5-44f6-9e05-6c88c28a7b50.png)
 
 4. If a response is needed, the slave returns data one bit at a time to the master along the MISO line. The master reads the bits as they are received:
 
-[![](RackMultipart20221004-1-uc1opb_html_d96c4efeb27015d1.png)](https://www.circuitbasics.com/wp-content/uploads/2016/01/Introduction-to-SPI-Data-Transmission-Diagram-Slave-to-Master-Data-Transfer.png)
+![Uploading image.png…]()
 
 # ADVANTAGES AND DISADVANTAGES OF SPI
 
