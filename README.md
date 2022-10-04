@@ -4,7 +4,8 @@ One unique benefit of SPI is the fact that data can be transferred without inter
 
 Devices communicating via SPI are in a master-slave relationship. The master is the controlling device (usually a microcontroller), while the slave (usually a sensor, display, or memory chip) takes instruction from the master. The simplest configuration of SPI is a single master, single slave system, but one master can control more than one slave (more on this below).
 
-[![](RackMultipart20221004-1-uc1opb_html_55a8bff21e86825a.png)](https://www.circuitbasics.com/wp-content/uploads/2016/01/Introduction-to-SPI-Master-and-Slave.png)
+[![]![image](https://user-images.githubusercontent.com/56084662/193824125-bf139d6e-ccc1-420a-a3e5-05cd528a1e31.png)
+
 
 **MOSI (Master Output/Slave Input)** – Line for the master to send data to the slave.
 
